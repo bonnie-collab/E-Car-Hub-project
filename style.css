@@ -65,3 +65,70 @@ img:hover{
    background-color: gold; 
    color: blue;
 }
+
+/* Styling the services page */
+/* image card overlay */
+#A15{
+    font-weight: 200PX;
+    font-size: 30PX;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.A16{
+    font-display: unset;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* styling the h1 compressive */
+#A17{
+    font-size: 30px;
+    color: gold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#A18{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40PX;
+    color: blue;
+}
+#A18:hover{
+    color: gold;
+}
+
+/* paragraphs */
+#A19{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+/* speciality detailing */
+.h4{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* paragraph */
+.par{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* styling request services */
+#40{
+    padding: 12px 32px;
+    width: fit-content;
+    display: block;
+    margin:0 auto;
+}
+
+/* custom quote */
+.green{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.red{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
