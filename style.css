@@ -137,26 +137,93 @@ img:hover{
     margin:0 auto;
 }
 
+
 /* custom quote */
-.green{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px;
+/* ===== Scoped Styling Using ID ===== */
+#customQuoteCard {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Card Container */
+#customQuoteCard .quote-wrapper {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    border-radius: 40px;
+    padding: 80px 40px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Heading */
+#customQuoteCard h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+#customQuoteCard p {
+    font-size: 18px;
+    color: #cbd5e1;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+}
+
+/* Buttons Container */
+#customQuoteCard .btn-group-custom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Orange Button */
+#customQuoteCard .btn-orange {
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
     font-weight: 600;
+    border: none;
+    transition: 0.3s ease;
 }
 
-.red{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+#customQuoteCard .btn-orange:hover {
+    background-color: #e55f00;
+    transform: translateY(-2px);
 }
 
-/* services */
-.ser{
-    font-family: Georgia, 'Times New Roman', Times, serif;
+/* Outline Button */
+#customQuoteCard .btn-outline-custom {
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1.5px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    transition: 0.3s ease;
 }
 
-/* contacts */
-#pic:hover{
-    transform: none;
+#customQuoteCard .btn-outline-custom:hover {
+    background-color: #ffffff;
+    color: #0d1b2a;
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+    #customQuoteCard h1 {
+        font-size: 32px;
+    }
+
+    #customQuoteCard .quote-wrapper {
+        padding: 50px 25px;
+    }
+}
+/* stling custom quote ends here */
+
 
 /* image cards of overlay service styling  */
 .services-section::before{
@@ -247,9 +314,11 @@ body{
   border-radius: 50%;
   padding: 20px;
 }
+/* card carousel ends here */
 
-/* stlying the testemonials cards starts here */
-        body{
+
+/* styling of testmonials */
+body{
             background-color: #f5f6f8;
             font-family: 'Segoe UI', sans-serif;
         }
@@ -331,87 +400,96 @@ body{
             font-size: 14px;
             color: #64748b;
         }
-/* styling testesmomials ends here */
+/* stling of testmonials end here */
 
 
 
-/* index.html stlying of the image card section 4 starts */
-body {
-    background-color: #f3f4f6;
+/* image card sevice for detailing starts here */
+
+/* All styling scoped under this ID only */
+#kenyaSection {
+    background-color: #f5f6f8;
     font-family: 'Segoe UI', sans-serif;
 }
 
-/* Card Styling */
-.service-card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 40px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: 0.3s ease;
-    height: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-}
-
-/* Icon Box */
-.icon-box {
-    width: 65px;
-    height: 65px;
-    border-radius: 14px;
+/* Section layout */
+#kenyaSection .detail-section {
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 26px;
-    margin-bottom: 20px;
-    background-color: #f1f3f5;
-    color: #6c757d;
-    transition: all 0.3s ease;
-    cursor: pointer;
 }
 
-/* Default orange icon (middle one) */
-.icon-orange {
-    background-color: #ff6b00;
-    color: #ffffff;
+/* Text container */
+#kenyaSection .detail-text {
+    padding: 80px;
 }
 
-/* 🔥 Hover effect — icon turns orange */
-.icon-box:hover {
-    background-color: #ff6b00;
-    color: #ffffff;
-    transform: scale(1.1);
+#kenyaSection .detail-text small {
+    color: #ff6b00;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-/* Title */
-.service-title {
+#kenyaSection .detail-text h1 {
+    font-size: 48px;
     font-weight: 700;
-    font-size: 20px;
-    margin-bottom: 15px;
+    margin: 20px 0;
+    color: #0d1b2a;
 }
 
-/* Text */
-.service-text {
-    color: #6c757d;
-    font-size: 15px;
-    line-height: 1.7;
+#kenyaSection .detail-text p {
+    font-size: 18px;
+    color: #5f6c7b;
+    line-height: 1.8;
+    margin-bottom: 40px;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .service-card {
-        text-align: center;
-        padding: 30px 20px;
+/* Buttons */
+#kenyaSection .btn-orange {
+    background-color: #ff6b00;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#kenyaSection .btn-orange:hover {
+    background-color: #e55f00;
+    color: white;
+}
+
+#kenyaSection .btn-outline-custom {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #0d1b2a;
+    color: #0d1b2a;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+#kenyaSection .btn-outline-custom:hover {
+    background-color: #0d1b2a;
+    color: white;
+}
+
+/* Image */
+#kenyaSection .detail-image {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2') center center/cover no-repeat;
+    border-radius: 80%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #kenyaSection .detail-text {
+        padding: 40px;
     }
 
-    .icon-box {
-        margin: 0 auto 20px auto;
+    #kenyaSection .detail-image {
+        height: 400px;
     }
 }
-
-#s25:hover{
-    background-color: gainsboro;
-}
-/* index.html stlying of the image card section 4 ends  */
-
+/* image services ends here */
