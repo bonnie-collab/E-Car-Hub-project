@@ -263,7 +263,7 @@ img:hover{
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.service-card:hover{
+#nanu:hover{
   transform:translateY(-5px);
   background-color: gold;
   color: #f8f9fa;
@@ -493,3 +493,203 @@ body{
     }
 }
 /* image services ends here */
+
+
+
+
+/* Section Styling of compressive solution */
+#services-section {
+    background-color: #f5f7fa;
+    padding: 60px 0;
+}
+
+/* Title Styling */
+#services-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#services-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #ff6b00;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+}
+
+/* Card Styling */
+#card-rental,
+#card-mechanical,
+#card-wash {
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+#card-rental:hover,
+#card-mechanical:hover,
+#card-wash:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon box */
+#icon-rental,
+#icon-mechanical,
+#icon-wash {
+    width: 50px;
+    height: 50px;
+    background-color: #fff3eb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ff6b00;
+}
+
+/* Card Title */
+#title-rental,
+#title-mechanical,
+#title-wash {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+#text-rental,
+#text-mechanical,
+#text-wash {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* List Styling */
+#list-rental li,
+#list-mechanical li,
+#list-wash li {
+    list-style: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#list-rental li::before,
+#list-mechanical li::before,
+#list-wash li::before {
+    content: "○";
+    color: #ff6b00;
+    margin-right: 8px;
+}
+
+/* Button Styling */
+#btn-rental,
+#btn-mechanical,
+#btn-wash {
+    background-color: #0b1c39;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+}
+
+#btn-rental:hover,
+#btn-mechanical:hover,
+#btn-wash:hover {
+    background-color: #132a52;
+}
+
+/* compressive solution ends here */
+
+
+/* ================= HOME BACK LINK ================= */
+#home-back {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#home-back i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* ================= SECTION ================= */
+#services-section {
+    background: #f4f6f9;
+    padding: 60px 0;
+}
+
+/* ================= CARD ================= */
+#service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+#service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= ICON ================= */
+#service-icon {
+    width: 55px;
+    height: 55px;
+    background: #fff4eb;
+    color: #ff6b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ================= TITLE ================= */
+#service-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ================= LIST ================= */
+#service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+#service-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#service-list li i {
+    color: #ff6b00;
+    margin-right: 8px;
+}
+
+/* ================= BUTTON ================= */
+#request-btn {
+    background: #0d1b2a;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 500;
+}
+
+#request-btn:hover {
+    background: #162c45;
+}
