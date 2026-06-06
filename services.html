@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <!-- linking boostrap and js script --> 
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <script src="dist/js/bootstrap.js"></script>
+
+    <!-- css styling  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- online linking of boostrap icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+
+     <!-- section one starts here nav bar  -->
+         <section class="row">
+            <div class="col-lg-12">
+                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a href="index.html" class="navbar-brand"><img src="images/Car_Grey.webp" alt="Car_Grey"><b>E-Car Hub</b></a>
+
+                     <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+
+                     <div id="navbarcontents" class="navbar-collapse collapse">
+                        <div class="navbar-nav ms-auto">
+                            <a href="index.html" class="nav-link active btn btn-warning rounded-pill px-4 m-2">Home</a>
+                            <a href="services.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Service</a>
+                            <a href="about.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">About Us</a>
+                            <a href="#" class="nav-link btn btn-warning rounded-pill px-4 m-2">Book Service</a>
+                        </div>
+                     </div>
+                 </nav>
+            </div>
+         </section>
+        <!-- section one ends here nav bar -->
+
+        <!-- image card overlay -->
+       <section class="row">
+            <div class="col-lg-11 mx-auto">
+                <div class="card text-bg-dark text-white">
+                     <img src="images/repair4.jpg" class="card-img rounded mx-auto d-block" alt="repair" width="200" height="400">
+                     <div class="card-img-overlay">
+                     <h5 class="card-title pt-5 text-center text-primary" id="A15"><b>World Class Care</b></h5>
+                     <h5 class="card-title pt-5 text-center text-primary" id="A15"><b>Our Services</b></h5>
+
+                      <p class="card-text text-center text-align-middle pt-5 A16">From luxury rentals to expert engine repairs, E-car Hub provides comprehensive automotive solutions tailored for the Kenyan environment.</p>
+
+                    </div>
+                </div>
+            </div>
+       </section>
+
+       <!-- smaller overlay cards services -->
+         <div class="container cards-row">
+             <div class="row g-4">
+
+                <div class="col-md-3">
+                     <div class="service-card shadow" id="manu">
+                     <i class="bi bi-clock"></i>
+                     <h5>Quick Turnaround</h5>
+                     <p>We value your time with efficient service.</p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-3">
+                     <div class="service-card shadow" id="manu">
+                     <i class="bi bi-shield-check"></i>
+                     <h5>Quality Parts</h5>
+                     <p>Only genuine and certified auto parts used.</p>
+                     </div>
+                  </div>
+
+                   <div class="col-md-3">
+                     <div  class="service-card shadow" id="manu">
+                     <i class="bi bi-lightning"></i>
+                     <h5>Expert Diagnostics</h5>
+                     <p>Pinpoint accuracy in identifying car issues.</p>
+                     </div>
+                  </div>
+
+                  <div class="col-md-3">
+                     <div class="service-card shadow" id="manu">
+                     <i class="bi bi-stars"></i>
+                     <h5>Attention to Detail</h5>
+                     <p>We don't miss the small things.</p>
+                     </div>
+                  </div>
+
+            </div>
+         </div>
+        <!-- ends of small overlay cards --> <br><br>
+
+       <!-- section of compresive solutions -->
+       <section id="services-section">
+
+            <div class="container">
+
+                <!-- Title -->
+                <h2 id="services-title">Comprehensive Solutions</h2>
+                <div id="services-underline"></div>
+
+                <div class="row g-4">
+
+                    <!-- Car Rental -->
+                    <div class="col-md-4">
+                        <div id="card-rental">
+                            <div id="icon-rental">🚗</div>
+                            <h5 id="title-rental">Car Rental</h5>
+                            <p id="text-rental">
+                                A fleet of well-maintained vehicles for every need. Economy cars for city errands, rugged SUVs for upcountry travel, and luxury vehicles for special occasions.
+                            </p>
+
+                            <ul id="list-rental">
+                                <li>Daily, Weekly & Monthly Rates</li>
+                                <li>Chauffeur Driven Options</li>
+                                <li>Fully Insured Fleet</li>
+                                <li>24/7 Roadside Assistance</li>
+                            </ul>
+
+                            <button id="btn-rental">Request Service</button>
+                        </div>
+                    </div>
+
+                    <!-- Mechanical Repairs -->
+                    <div class="col-md-4">
+                        <div id="card-mechanical">
+                            <div id="icon-mechanical">🔧</div>
+                            <h5 id="title-mechanical">Mechanical Repairs</h5>
+                            <p id="text-mechanical">
+                                Our state-of-the-art workshop handles everything from minor fixes to major overhauls. We specialize in engine diagnostics, brake systems, and suspension.
+                            </p>
+
+                            <ul id="list-mechanical">
+                                <li>Computerized Diagnostics</li>
+                                <li>Engine Overhaul</li>
+                                <li>Brake & Suspension</li>
+                                <li>Electrical Systems</li>
+                            </ul>
+
+                            <button id="btn-mechanical">Request Service</button>
+                        </div>
+                    </div>
+
+                    <!-- Car Wash -->
+                    <div class="col-md-4">
+                        <div id="card-wash">
+                            <div id="icon-wash">🔥</div>
+                            <h5 id="title-wash">Professional Car Wash</h5>
+                            <p id="text-wash">
+                                Give your car that showroom shine. We offer comprehensive cleaning packages including exterior foam wash, interior vacuuming, and waxing.
+                            </p>
+
+                            <ul id="list-wash">
+                                <li>High-Pressure Foam Wash</li>
+                                <li>Engine Wash/Steam Cleaning</li>
+                                <li>Interior Detailing</li>
+                                <li>Ceramic Coating</li>
+                            </ul>
+
+                            <button id="btn-wash">Request Service</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+       <br>
+        <!-- end of the section part one compresive soltuion -->
+
+        <!-- compressive 2 section part two -->
+
+        <section id="services-section">
+            <div class="container">
+                <div class="row g-4">
+
+                    <!-- ================= CARD 1 ================= -->
+                    <div class="col-lg-4 col-md-4">
+                        <div id="service-card">
+                            <div id="service-icon">
+                                <i class="bi bi-gear"></i>
+                            </div>
+                            <h5 id="service-title">Routine Maintenance</h5>
+                            <p class="text-muted">
+                                Keep your vehicle running smoothly with our scheduled maintenance packages.
+                            </p>
+                            <ul id="service-list">
+                                <li><i class="bi bi-check-circle"></i>Oil & Filter Change</li>
+                                <li><i class="bi bi-check-circle"></i>Fluid Checks</li>
+                                <li><i class="bi bi-check-circle"></i>Tire Rotation</li>
+                                <li><i class="bi bi-check-circle"></i>Safety Inspections</li>
+                            </ul>
+                            <button id="request-btn">Request Service</button>
+                        </div>
+                    </div>
+
+                    <!-- ================= CARD 2 ================= -->
+                    <div class="col-lg-4 col-md-4">
+                        <div id="service-card">
+                            <div id="service-icon">
+                                <i class="bi bi-bag"></i>
+                            </div>
+                            <h5 id="service-title">Auto Products Sales</h5>
+                            <p class="text-muted">
+                                We stock a wide range of genuine car accessories and maintenance products.
+                            </p>
+                            <ul id="service-list">
+                                <li><i class="bi bi-check-circle"></i>Genuine Spare Parts</li>
+                                <li><i class="bi bi-check-circle"></i>Car Care Products</li>
+                                <li><i class="bi bi-check-circle"></i>Accessories</li>
+                                <li><i class="bi bi-check-circle"></i>Batteries & Tires</li>
+                            </ul>
+                            <button id="request-btn">Request Service</button>
+                        </div>
+                    </div>
+
+                    <!-- ================= CARD 3 ================= -->
+                    <div class="col-lg-4 col-md-4">
+                        <div id="service-card">
+                            <div id="service-icon">
+                                <i class="bi bi-brush"></i>
+                            </div>
+                            <h5 id="service-title">Body Work & Paint</h5>
+                            <p class="text-muted">
+                                Professional dent repair and painting services to restore your vehicle's look.
+                            </p>
+                            <ul id="service-list">
+                                <li><i class="bi bi-check-circle"></i>Dent Removal</li>
+                                <li><i class="bi bi-check-circle"></i>Scratch Repair</li>
+                                <li><i class="bi bi-check-circle"></i>Buffing & Polishing</li>
+                                <li><i class="bi bi-check-circle"></i>Touch-up Painting</li>
+                            </ul>
+                            <button id="request-btn">Request Service</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section><br>
+         <hr>
+         <!-- end of compressive 2 -->
+
+         <!-- special detailing  -->
+    
+         <section id="kenyaSection" class="container-fluid detail-section">
+            <div class="row w-100">
+
+               <!-- Left Text Side -->
+               <div class="col-lg-6 d-flex align-items-center">
+                     <div class="detail-text">
+                        <small>SPECIALTY DETAILING</small>
+                        <h1>Premium Interior & <br> Exterior Detailing</h1>
+                        <p>
+                           Our advanced detailing service goes beyond a standard wash.
+                           We use specialized chemicals and equipment to deep clean your
+                           upholstery, steam your engine, and protect your paint with
+                           ceramic technology.
+                        </p>
+
+                        <div class="d-flex gap-3">
+                           <button class="btn-orange">Book Detailing</button>
+                           <button class="btn-outline-custom">View Gallery</button>
+                        </div>
+                     </div>
+               </div>
+
+               <!-- Right Image Side -->
+               <div class="col-lg-6 detail-image"></div>
+
+            </div>
+         </section>
+          <!-- detailing end here -->
+
+
+          <!-- custom qoute -->
+
+         <section id="customQuoteCard">
+            <div class="quote-wrapper">
+               <h1>Need a custom quote?</h1>
+               <p>
+                     For large fleet services or specific mechanical repairs, our team is ready 
+                     to provide a tailored solution.
+               </p>
+
+               <div class="btn-group-custom">
+                     <button class="btn-orange">Contact an Expert</button>
+                     <button class="btn-outline-custom">Call Now</button>
+               </div>
+            </div>
+         </section>
+           <!-- custom quote ends here -->
+
+           <!-- footers -->
+               <section class="row text-center p-3 mb-2 bg-primary text-white">
+                <div class="col-lg-3">
+                    <h1>E car <span class="text-primary">Hub</span></h1>
+
+                    <p>Kenya premier Automotive partner. from reliable rental to expert maintainance, we keep you moving with quality and trust</p>
+                </div>
+
+                <!-- services -->
+                 <div class="col-lg-3 text-center ser">
+                    <h1>Services</h1>
+                    <ul>
+                        <li>Car repair & maintainance</li>
+                        <li>Professional Car Wash</li>
+                        <li>Engine diagonistics</li>
+                        <li>Auto parts sales</li>
+                    </ul>
+                </div>
+                <!-- end of services -->
+
+                <!-- contact us -->
+                 <div class="col-lg-3 text-center ser">
+                    <h1>Contact Us</h1>
+                    <img src="images/location-pin.webp" alt="location-pin" width="5%" id="pic">Nairobi, Kenya <br><br>
+
+                    <img src="images/phone_2.webp" alt="phone" width="5%" id="pic"> +254 76000000 <br><br>
+
+                    <img src="images/message1.webp" alt="phone" width="5%" id="pic"> info@ecarhub.co.ke <br><br>
+
+                    <!-- media links -->
+                     <a href="htps://www.facebook.com"><img src="images/fb.webp" alt="fb" width="10%"></a>  
+                     <a href="htpps://www.instagram.com"><img src="images/ig.webp" alt="ig"  width="10%"></a>
+                     <a href="https:www.titok.com"><img src="images/tiktok_icon.webp" alt="titok"  width="10%"></a>
+
+                </div>
+            </section>
+             <!-- endnote summarry -->
+
+            <!-- footer -->
+             
+                 <footer class="text-center text-white bg-dark p-2">
+                    <b>developed by Eng.Okeyo. &copy; 2026 all rights reserved</b>
+                 </footer>
+
+            <!-- end of footer -->
+
+</body>
+</html>
