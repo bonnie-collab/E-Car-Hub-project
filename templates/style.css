@@ -1,0 +1,695 @@
+/* styling btn disable */
+#mine {
+    background-color: whitesmoke;
+    color: brown;
+    font-size: large;
+    font-weight: 500;
+    padding: 10px; 
+}
+
+/* hover disply on button explore */
+.A1:hover {
+    background-color: greenyellow;
+}
+
+/* font our fleet */
+.A2{
+    font-size: 40px;
+}
+/* hover img */
+img:hover{
+    transform: scale(1.2);
+}
+
+/* expertise section */
+.A3{
+    font-size: 40px;
+    font-weight: 500;
+}
+.A4{
+    font-size: 30px;
+    font-weight: 550;
+}
+
+/* stlying book app btn */
+.A5:hover{
+    background-color: greenyellow;
+    padding: 5px;   
+}
+
+.A6{
+    background-color: goldenrod;
+    color: blue;
+    padding: 5px;
+    border-radius: 5px;
+    border: 5px;
+}
+
+/* Sstlying hit the roaad section */
+.A7{
+    font-size: 80PX;
+    font-weight: 400PX;
+}
+
+/* STLYING footer links */
+.A8{
+    background-color: goldenrod;
+    text-decoration: none;
+    color: brown;
+    padding: 10px 20px;
+    border: 4px;
+    border-radius: 5px;
+    margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.A8:hover{
+   background-color: gainsboro; 
+   color: blue;
+}
+
+
+/* Styling the services page */
+/* image card overlay */
+#A15{
+    font-weight: 200PX;
+    font-size: 30PX;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* image card your journey */
+.wheel{
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* ends here */
+
+.A16{
+    font-display: unset;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* styling the h1 compressive */
+#A17{
+    font-size: 30px;
+    color: gold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#A18{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40PX;
+    color: blue;
+}
+#A18:hover{
+    color: gold;
+}
+
+/* paragraphs */
+#A19{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+}
+
+/* speciality detailing */
+.h4{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* paragraph */
+.par{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.roof{
+    justify-content: center;
+    align-content: center;
+}
+
+/* styling request services */
+#40{
+    padding: 12px 32px;
+    width: fit-content;
+    display: block;
+    margin:0 auto;
+}
+
+
+/* custom quote */
+/* ===== Scoped Styling Using ID ===== */
+#customQuoteCard {
+    padding: 80px 20px;
+    background-color: #f4f4f4;
+}
+
+/* Card Container */
+#customQuoteCard .quote-wrapper {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b);
+    border-radius: 40px;
+    padding: 80px 40px;
+    text-align: center;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Heading */
+#customQuoteCard h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+#customQuoteCard p {
+    font-size: 18px;
+    color: #cbd5e1;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    line-height: 1.7;
+}
+
+/* Buttons Container */
+#customQuoteCard .btn-group-custom {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Orange Button */
+#customQuoteCard .btn-orange {
+    background-color: #ff6b00;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#customQuoteCard .btn-orange:hover {
+    background-color: #e55f00;
+    transform: translateY(-2px);
+}
+
+/* Outline Button */
+#customQuoteCard .btn-outline-custom {
+    padding: 14px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 1.5px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+
+#customQuoteCard .btn-outline-custom:hover {
+    background-color: #ffffff;
+    color: #0d1b2a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    #customQuoteCard h1 {
+        font-size: 32px;
+    }
+
+    #customQuoteCard .quote-wrapper {
+        padding: 50px 25px;
+    }
+}
+/* stling custom quote ends here */
+
+
+/* image cards of overlay service styling  */
+.services-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+.services-content{
+  position:relative;
+  z-index:2;
+  text-align:center;
+}
+
+.services-content h1{
+  font-size:60px;
+  font-weight:800;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.services-content p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+  opacity:0.9;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.service-card{
+  border-radius:15px;
+  padding:30px 20px;
+  text-align:center;
+  background:#f8f9fa;
+  height:100%;
+  transition:0.3s;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#nanu:hover{
+  transform:translateY(-5px);
+  background-color: gold;
+  color: #f8f9fa;
+}
+
+.service-card i{
+  font-size:28px;
+  color:#ff6a00;
+}
+
+.service-card h5{
+  margin-top:15px;
+  font-weight:700;
+}
+
+.service-card p{
+  font-size:14px;
+  color:#6c757d;
+}
+
+.cards-row{
+  margin-top:-70px;
+  position:relative;
+  z-index:3;
+}
+
+/* image card stlying ends here */
+
+
+body{
+  background:#f3f4f6;
+}
+
+
+/* css styling to the caursels cards starts here */
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+  padding: 20px;
+}
+/* card carousel ends here */
+
+
+/* styling of testmonials */
+body{
+            background-color: #f5f6f8;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .section-title-small{
+            color: #ff6b00;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+
+        .section-title{
+            font-weight: 700;
+            font-size: 42px;
+            color: #0f172a;
+        }
+
+        .title-underline{
+            width: 60px;
+            height: 4px;
+            background: #ff6b00;
+            margin: 15px auto 0;
+            border-radius: 5px;
+        }
+
+        .testimonial-card{
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            position: relative;
+            height: 100%;
+        }
+
+        .stars{
+            color: #ff6b00;
+            font-size: 18px;
+        }
+
+        .quote-icon{
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 40px;
+            color: #e5e7eb;
+        }
+
+        .testimonial-text{
+            color: #475569;
+            font-style: italic;
+            margin: 20px 0 30px;
+            line-height: 1.6;
+        }
+
+        .profile{
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-circle{
+            width: 50px;
+            height: 50px;
+            background: #0f172a;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .profile-name{
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        .profile-role{
+            font-size: 14px;
+            color: #64748b;
+        }
+/* stling of testmonials end here */
+
+
+
+/* image card sevice for detailing starts here */
+
+/* All styling scoped under this ID only */
+#kenyaSection {
+    background-color: #f5f6f8;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Section layout */
+#kenyaSection .detail-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Text container */
+#kenyaSection .detail-text {
+    padding: 80px;
+}
+
+#kenyaSection .detail-text small {
+    color: #ff6b00;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+#kenyaSection .detail-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #0d1b2a;
+}
+
+#kenyaSection .detail-text p {
+    font-size: 18px;
+    color: #5f6c7b;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Buttons */
+#kenyaSection .btn-orange {
+    background-color: #ff6b00;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: none;
+    transition: 0.3s ease;
+}
+
+#kenyaSection .btn-orange:hover {
+    background-color: #e55f00;
+    color: white;
+}
+
+#kenyaSection .btn-outline-custom {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #0d1b2a;
+    color: #0d1b2a;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+#kenyaSection .btn-outline-custom:hover {
+    background-color: #0d1b2a;
+    color: white;
+}
+
+/* Image */
+#kenyaSection .detail-image {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2') center center/cover no-repeat;
+    border-radius: 80%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    #kenyaSection .detail-text {
+        padding: 40px;
+    }
+
+    #kenyaSection .detail-image {
+        height: 400px;
+    }
+}
+/* image services ends here */
+
+
+
+
+/* Section Styling of compressive solution */
+#services-section {
+    background-color: #f5f7fa;
+    padding: 60px 0;
+}
+
+/* Title Styling */
+#services-title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#services-underline {
+    width: 60px;
+    height: 4px;
+    background-color: #ff6b00;
+    margin: 0 auto 40px auto;
+    border-radius: 2px;
+}
+
+/* Card Styling */
+#card-rental,
+#card-mechanical,
+#card-wash {
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+#card-rental:hover,
+#card-mechanical:hover,
+#card-wash:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon box */
+#icon-rental,
+#icon-mechanical,
+#icon-wash {
+    width: 50px;
+    height: 50px;
+    background-color: #fff3eb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #ff6b00;
+}
+
+/* Card Title */
+#title-rental,
+#title-mechanical,
+#title-wash {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+#text-rental,
+#text-mechanical,
+#text-wash {
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* List Styling */
+#list-rental li,
+#list-mechanical li,
+#list-wash li {
+    list-style: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#list-rental li::before,
+#list-mechanical li::before,
+#list-wash li::before {
+    content: "○";
+    color: #ff6b00;
+    margin-right: 8px;
+}
+
+/* Button Styling */
+#btn-rental,
+#btn-mechanical,
+#btn-wash {
+    background-color: #0b1c39;
+    color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: 500;
+    border: none;
+    width: 100%;
+}
+
+#btn-rental:hover,
+#btn-mechanical:hover,
+#btn-wash:hover {
+    background-color: #132a52;
+}
+
+/* compressive solution ends here */
+
+
+/* ================= HOME BACK LINK ================= */
+#home-back {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#home-back i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+/* ================= SECTION ================= */
+#services-section {
+    background: #f4f6f9;
+    padding: 60px 0;
+}
+
+/* ================= CARD ================= */
+#service-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+#service-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= ICON ================= */
+#service-icon {
+    width: 55px;
+    height: 55px;
+    background: #fff4eb;
+    color: #ff6b00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ================= TITLE ================= */
+#service-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ================= LIST ================= */
+#service-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+#service-list li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+#service-list li i {
+    color: #ff6b00;
+    margin-right: 8px;
+}
+
+/* ================= BUTTON ================= */
+#request-btn {
+    background: #0d1b2a;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    font-weight: 500;
+}
+
+#request-btn:hover {
+    background: #162c45;
+}
