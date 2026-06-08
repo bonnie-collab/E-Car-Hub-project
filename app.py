@@ -2,14 +2,12 @@ import os
 import uuid
 import random
 import string
+import webbrowser
 from datetime import datetime, timedelta
 
-from flask import Flask, request, jsonify
-
+from flask import Flask, request, jsonify, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
-
 from flask_bcrypt import Bcrypt
-
 from flask_jwt_extended import (
     JWTManager, create_access_token, create_refresh_token,
     jwt_required, get_jwt_identity, get_jwt
@@ -19,9 +17,22 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 # ==========================================
+# 📁 FIXED FRONTEND PATH SETUP (Matching image_c2b84c.png)
+# ==========================================
+# Since app.py is in the root, we look directly for the 'templates' folder right next to it
+base_dir = os.path.abspath(os.path.dirname(__file__))
+frontend_folder = os.path.join(base_dir, 'templates')
+
+print(f"--> SERVER IS SERVING FRONTEND FROM: {frontend_folder}")
+
+# Explicitly bind the templates folder as Flask's static assets container
+app.config['STATIC_FOLDER'] = frontend_folder
+app.static_folder = frontend_folder
+app.static_url_path = ''
+
+# ==========================================
 # ⚙️ DATABASE CONNECTION CONFIG (MySQL phpMyAdmin)
 # ==========================================
-# Assuming standard XAMPP or local installation details. Adjust password if one is set.
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:@localhost/ecarhub'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'ecarhub-super-secret-key-2026'
@@ -59,7 +70,6 @@ def role_required(allowed_roles):
 # ==========================================
 # 📊 ORM MODELS MAPPED TO PHPMYADMIN TABLES
 # ==========================================
-
 class User(db.Model):
     __tablename__ = 'users'
     user_id = db.Column(db.String(36), primary_key=True, default=generate_uuid)
@@ -144,10 +154,21 @@ def add_claims_to_jwt(identity):
     return {"role": "customer"}
 
 # ==========================================
+# 🌐 FRONTEND STATIC INTERFACE ROUTING
+# ==========================================
+@app.route('/')
+def serve_index():
+    return send_from_directory(app.static_folder, 'index.html')
+
+@app.route('/<path:path>')
+def serve_static_files(path):
+    return send_from_directory(app.static_folder, path)
+
+# ==========================================
 # 🛑 CORE API REST ROUTE ENDPOINTS
 # ==========================================
 
-# --- 1. AUTH SYSTEM ---
+# --- 1. AUTH SYSTEM WITH REDIRECT FLOWS ---
 @app.route('/api/auth/register', methods=['POST'])
 def register():
     data = request.get_json()
@@ -166,7 +187,12 @@ def register():
     )
     db.session.add(new_user)
     db.session.commit()
-    return jsonify({"message": "User registered successfully!", "userId": new_user.user_id}), 201
+    
+    return jsonify({
+        "message": "User registered successfully!", 
+        "userId": new_user.user_id,
+        "redirect_to": "/login.html"  # Frontend will handle navigating here
+    }), 201
 
 @app.route('/api/auth/login', methods=['POST'])
 def login():
@@ -179,11 +205,15 @@ def login():
     access_token = create_access_token(identity=user.user_id)
     refresh_token = create_refresh_token(identity=user.user_id)
     
+    # Redirection defaults: user and admin both navigate to about.html for now
+    destination = "/about.html"
+        
     return jsonify({
         "access_token": access_token,
         "refresh_token": refresh_token,
         "role": user.user_role,
-        "user_id": user.user_id
+        "user_id": user.user_id,
+        "redirect_to": destination
     }), 200
 
 # --- 2. VEHICLE MANAGEMENT SYSTEM ---
@@ -287,7 +317,7 @@ def submit_service_request():
         issue_description=data.get('issue_description'),
         preferred_date=p_date,
         preferred_time=p_time,
-        estimated_cost=data.get('estimated_cost', 3000.00) # Baseline minimum diagnosis cost
+        estimated_cost=data.get('estimated_cost', 3000.00)
     )
     db.session.add(new_request)
     db.session.commit()
@@ -297,7 +327,6 @@ def submit_service_request():
 @app.route('/api/payments/mpesa-callback', methods=['POST'])
 def mpesa_callback():
     data = request.get_json()
-    # Parsing body schemas securely from Safaricom Daraja API callbacks
     try:
         stk_callback = data['Body']['stkCallback']
         result_code = stk_callback['ResultCode']
@@ -307,11 +336,10 @@ def mpesa_callback():
             meta_items = stk_callback['CallbackMetadata']['Item']
             mpesa_receipt = next(item['Value'] for item in meta_items if item['Name'] == 'MpesaReceiptNumber')
             
-            # Match the dynamic response tracking transaction
             payment = Payment.query.filter_by(transaction_id=merchant_request_id).first()
             if payment:
                 payment.payment_status = 'completed'
-                payment.transaction_id = mpesa_receipt # Swap Request token ID out for original receipt code.
+                payment.transaction_id = mpesa_receipt
                 
                 if payment.booking_id:
                     b = Booking.query.get(payment.booking_id)
@@ -323,8 +351,16 @@ def mpesa_callback():
     except Exception as e:
         return jsonify({"ResultCode": 1, "ResultDesc": f"Fail verification parsing: {str(e)}"}), 400
 
-# =========================
-# RUN APP
-# =========================
+# ==========================================
+# 🚀 SERVER STARTUP LIFECYCLE
+# ==========================================
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Make sure MySQL in XAMPP is running before starting this script!
+    with app.app_context():
+        db.create_all()
+        
+    if not os.environ.get("WERKZEUG_RUN_MAIN"):
+        print(f"--> SERVING WEB DIRECTLY FROM ROOT: {frontend_folder}")
+        webbrowser.open_new("http://127.0.0.1:5000/")
+        
+    app.run(host='0.0.0.0', port=5000, debug=True)

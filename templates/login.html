@@ -3,58 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <!-- links -->
-       <link rel="stylesheet" href="dist/css/bootstrap.css">
-    <script src="dist/js/bootstrap.js"></script>
+    <title>Login - E-Car Hub</title>
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --primary-color: #212529;
+            --accent-color: #ffc107;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Modern split card container */
+        .login-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+            max-width: 950px;
+            width: 100%;
+            background: #ffffff;
+        }
+
+        /* Left Branding Section */
+        .brand-side {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url('images/Car_Grey.webp') center/cover no-repeat;
+            color: #ffffff;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            min-height: 450px;
+        }
+
+        /* Back Button Style */
+        .back-btn {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-color);
+            transform: translateX(-3px);
+        }
+
+        /* Right Form Section */
+        .form-side {
+            padding: 3.5rem 3rem;
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.2);
+        }
+
+        /* Password Input Wrapper for Eye Icon */
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #6c757d;
+            transition: color 0.2s;
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-color);
+        }
+
+        .btn-login {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-login:hover {
+            background-color: #343a40;
+            color: var(--accent-color);
+        }
+
+        /* Handle Mobile responsiveness seamlessly */
+        @media (max-width: 767.98px) {
+            .brand-side {
+                min-height: 250px;
+                padding: 2rem;
+            }
+            .form-side {
+                padding: 2.5rem 1.5rem;
+            }
+            .back-btn {
+                color: #212529; /* High visibility on light background for mobile top-bar */
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-        <div class="container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
 
-                            <div class="card shadow">
-                                <div class="card-body">
-                                <img src="images/Car_Grey.webp" alt="Car_Grey"><b>E-Car Hub</b>
-                                    <h3 class="text-center mb-4 text-warning">Sign Up</h3>
+<div class="container d-flex justify-content-center align-items-center py-5">
+    <div class="card login-card">
+        <div class="row g-0">
+            
+            <div class="col-md-6 brand-side">
+                <div>
+                    <a href="index.html" class="back-btn">
+                        <i class="bi bi-arrow-left-circle-fill fs-5"></i> Back to Home
+                    </a>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="fs-4 fw-bold text-warning">E-Car Hub</span>
+                    </div>
+                    <h1 class="display-6 fw-bold mb-3">Modern Hire For Everyone</h1>
+                    <p class="lead text-light-50 fs-6">Why choose E-Car? It's simply the best place for all your modern driving expectations, premium journeys, and accessible luxury.</p>
+                </div>
+                
+                <div class="text-white-50 small">
+                    © 2026 E-Car Hub Inc. All rights reserved.
+                </div>
+            </div>
 
-                                    <form>
-                                        <!-- Email -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                                        </div>
+            <div class="col-md-6 form-side d-flex flex-column justify-content-center">
+                <div class="mb-4">
+                    <h2 class="fw-bold text-dark mb-1">Welcome Back</h2>
+                    <p class="text-muted small">Please fill your details to access your dashboard.</p>
+                </div>
 
-                                        <!-- Password -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input type="password" class="form-control" placeholder="Enter password" required>
-                                        </div>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary small">Email Address</label>
+                        <input type="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
 
-                                        <!-- Button -->
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary login">
-                                                Login
-                                            </button>
-                                        </div>
-
-                                    </form>
-
-                                     <!-- Login Link -->
-                                    <div class="text-center">
-                                        <small>
-                                        Don't have an account? 
-                                        <a href="signup.html" class="text-decoration-none">Sign up</a>
-                                        </small>
-                                    </div>
-
-                                </div>
-                            </div>
-
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary small">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="passwordInput" class="form-control" placeholder="••••••••" required>
+                            <i class="bi bi-eye password-toggle" id="toggleIcon" onclick="togglePasswordVisibility()"></i>
                         </div>
                     </div>
-         </div>
-        <!-- sign up form starts here -->        
+
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="text-decoration-none small text-warning fw-semibold">Forgot password?</a>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-4">
+                        <button type="submit" class="btn btn-login shadow-sm">
+                            Sign In
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-2">
+                    <span class="text-muted small">Don't have an account?</span>
+                    <a href="signup.html" class="text-decoration-none text-warning fw-semibold small ms-1">Sign up for free</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function togglePasswordVisibility() {
+        const passwordInput = document.getElementById('passwordInput');
+        const toggleIcon = document.getElementById('toggleIcon');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            // Switch to eye-slash icon when open
+            toggleIcon.classList.remove('bi-eye');
+            toggleIcon.classList.add('bi-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            // Switch back to default eye icon
+            toggleIcon.classList.remove('bi-eye-slash');
+            toggleIcon.classList.add('bi-eye');
+        }
+    }
+</script>
+
+<script src="dist/js/bootstrap.js"></script>
 </body>
 </html>

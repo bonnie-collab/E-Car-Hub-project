@@ -3,76 +3,266 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    <!--bootstrap links -->
+    <title>Sign Up - E-Car Hub</title>
+    
     <link rel="stylesheet" href="dist/css/bootstrap.css">
-    <!-- icons -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <!-- script linking -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <style>
+        /* Core Variable Matrix & Document Reset */
+        :root {
+            --primary-dark: #212529;
+            --accent-amber: #ffc107;
+            --bg-soft-gray: #f4f6f9;
+        }
+
+        body {
+            background-color: var(--bg-soft-gray);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Split Panel Layout Container Matrix */
+        .login-card {
+            border: none;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+            max-width: 950px;
+            width: 100%;
+            background: #ffffff;
+        }
+
+        /* Left Hand Marketing Panel Overlay & Image Canvas Context */
+        .brand-side {
+            /* References your specific car vehicle image from your root asset directory */
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('images/Car_Grey.webp') center/cover no-repeat;
+            color: #ffffff;
+            padding: 3.5rem 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            min-height: 550px;
+        }
+
+        /* High-End Floating Glassmorphism Back Arrow Link Design */
+        .back-btn-modern {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .back-btn-modern i {
+            transition: transform 0.3s ease;
+        }
+
+        /* Back Button Interaction Physics */
+        .back-btn-modern:hover {
+            background: #ffffff;
+            color: var(--primary-dark) !important;
+            border-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-btn-modern:hover i {
+            transform: translateX(-4px);
+        }
+
+        /* Right Hand Interaction Form Side Panel */
+        .form-side {
+            padding: 3.5rem 3rem;
+        }
+
+        .form-control {
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+            background-color: #fdfdfd;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .form-control:focus {
+            border-color: var(--accent-amber);
+            background-color: #ffffff;
+            box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+        }
+
+        /* Password Wrapper Element to House Floating Absolute Positioned Icons */
+        .password-wrapper {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #8a929a;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+            z-index: 5;
+        }
+
+        .password-toggle:hover {
+            color: var(--primary-dark);
+        }
+
+        /* Sign-Up Account Creation Call To Action Button Styling Rules */
+        .btn-login {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid var(--primary-dark);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* Advanced Physics Hover Pipeline for the Submission Button */
+        .btn-login:hover {
+            background-color: rgb(86, 86, 177);
+            border-color: var(--accent-amber);
+            color: var(--primary-dark) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 193, 7, 0.35);
+        }
+
+        /* Fluid Breakpoints Scaling for Small Display viewports and Mobile Screens */
+        @media (max-width: 767.98px) {
+            .brand-side {
+                min-height: 280px;
+                padding: 2rem 1.5rem;
+            }
+            .form-side {
+                padding: 2.5rem 1.5rem;
+            }
+            .back-btn-modern {
+                background: rgba(0, 0, 0, 0.5);
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+
     <script src="dist/js/bootstrap.js"></script>
-    <!-- css linking style -->
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="container mt-5">
-                    <div class="row justify-content-center">
-                        <div class="col-md-5">
 
-                            <div class="card shadow">
-                                  <a href="index.html" id="home-back">
-                                 <i class="bi bi-arrow-left"></i>Back </a>
-                                <div class="card-body">
-                                <img src="images/Car_Grey.webp" alt="Car_Grey" cklass = "text-center"><b>E-Car Hub</b>
-                                    <h3 class="text-center mb-4 text-warning">Sign Up</h3>
+<div class="container d-flex justify-content-center align-items-center py-5">
+    
+    <div class="card login-card">
+        <div class="row g-0">
+            
+            <div class="col-md-6 brand-side">
+                <div>
+                    <a href="index.html" class="back-btn-modern">
+                        <i class="bi bi-arrow-left"></i> <span>Back </span>
+                    </a>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="fs-4 fw-bold text-warning">E-Car Hub</span>
+                    </div>
+                    <h1 class="display-6 fw-bold mb-3">Why You Need to Have an Account with Us</h1>
+                    <p class="lead text-light-50 fs-6">
+                        Unlock high-end modern hires tailored effortlessly for your personal luxury. Creating a profile gains you immediate access to rapid checkout speeds, personalized tracking diagnostics, and zero-deposit membership loyalty pricing indices.
+                    </p>
+                </div>
+                
+                <div class="text-white-50 small">
+                    © 2026 E-Car Hub Inc. All rights reserved.
+                </div>
+            </div>
 
-                                    <form>
-                                        <!-- Name -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Full Name</label>
-                                            <input type="text" class="form-control" placeholder="Enter your name" required>
-                                        </div>
+            <div class="col-md-6 form-side d-flex flex-column justify-content-center">
+                <div class="mb-4">
+                    <h2 class="fw-bold text-dark mb-1">Sign Up</h2>
+                    <p class="text-muted small">Please populate the credentials matrix to claim your membership panel.</p>
+                </div>
 
-                                        <!-- Email -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Email</label>
-                                            <input type="email" class="form-control" placeholder="Enter your email" required>
-                                        </div>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary small">Full Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name" required>
+                    </div>
 
-                                        <!-- Password -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Password</label>
-                                            <input type="password" class="form-control" placeholder="Enter password" required>
-                                        </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary small">Email Address</label>
+                        <input type="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
 
-                                        <!-- Confirm Password -->
-                                        <div class="mb-3">
-                                            <label class="form-label">Confirm Password</label>
-                                            <input type="password" class="form-control" placeholder="Confirm password" required>
-                                        </div>
-
-                                        <!-- Button -->
-                                        <div class="d-grid">
-                                            <button type="submit" class="btn btn-primary">
-                                                Create Account
-                                            </button>
-                                        </div>
-
-                                    </form>
-                                    <!-- Login Link -->
-                                    <div class="text-center">
-                                        <small>
-                                        Already have an account? 
-                                        <a href="login.html" class="text-decoration-none">Login</a>
-                                        </small>
-                                    </div>
-                                    <!-- login link ends here -->
-
-                                </div>
-                            </div>
-
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold text-secondary small">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="passwordInput" class="form-control" placeholder="Enter password" required>
+                            <i class="bi bi-eye password-toggle" id="togglePasswordIcon" onclick="toggleFieldVisibility('passwordInput', 'togglePasswordIcon')"></i>
                         </div>
                     </div>
-         </div>
-        <!-- sign up form starts here -->        
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold text-secondary small">Confirm Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="confirmPasswordInput" class="form-control" placeholder="Confirm password" required>
+                            <i class="bi bi-eye password-toggle" id="toggleConfirmIcon" onclick="toggleFieldVisibility('confirmPasswordInput', 'toggleConfirmIcon')"></i>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-4">
+                        <button type="submit" class="btn btn-login shadow-sm">
+                            Create Account
+                        </button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-2">
+                    <span class="text-muted small">Already have an account?</span>
+                    <a href="login.html" class="text-decoration-none text-warning fw-semibold small ms-1">Login</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    /**
+     * Toggles security input masking configurations between hidden password blocks and readable text fields.
+     */
+    function toggleFieldVisibility(inputId, iconId) {
+        const inputField = document.getElementById(inputId);
+        const toggleIcon = document.getElementById(iconId);
+        
+        // Dynamically analyze current masking visibility configuration matrices
+        if (inputField.type === 'password') {
+            inputField.type = 'text'; // Reveal plaintext characters safely
+            toggleIcon.classList.remove('bi-eye');
+            toggleIcon.classList.add('bi-eye-slash'); // Switch classes to display slashed icon formatting look
+        } 
+        
+        else {
+            inputField.type = 'password'; // Reapply default hidden safe layout state mask
+            toggleIcon.classList.remove('bi-eye-slash');
+            toggleIcon.classList.add('bi-eye'); // Revert classes to baseline visibility eye formatting structures
+        }
+    }
+</script>
+
 </body>
 </html>

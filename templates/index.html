@@ -4,441 +4,402 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Car Hub</title>
-    <!-- linking boostrap and js script -->
+    
     <link rel="stylesheet" href="dist/css/bootstrap.css">
-    <!-- linking dist js -->
-    <script src="dist/js/bootstrap.js"></script>
-    <!-- linking css styling -->
-    <link rel="stylesheet" href="style.css">
-    <script src="dist/js/bootstrap.bundle.min.js"></script>
-    <!-- linking online icon css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
+     <link rel="stylesheet" href="style.css">
+   
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-      <!-- section one starts here nav bar  -->
-         <section class="row">
-            <div class="col-lg-12">
-                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a href="index.html" class="navbar-brand"><img src="images/Car_Grey.webp" alt="Car_Grey"><b>E-Car Hub</b></a>
+   <!-- ==============navigation bar====================== -->
 
-                     <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
-                        <span class="navbar-toggler-icon"></span>
-                     </button>
+    <div class="container-fluid px-0 sticky-top">
+         <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="images/Car_Grey.webp" alt="Car_Grey">
+                    <span class="fs-4 fw-bold text-dark ms-1">E-Car Hub</span>
+                </a>
 
-                     <div id="navbarcontents" class="navbar-collapse collapse">
-                         <div class="navbar-nav ms-auto">
-                            <a href="index.html" class="nav-link active btn btn-warning rounded-pill px-4 m-2">Home</a>
-                            <a href="services.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Service</a>
-                            <a href="about.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">About Us</a>
-                            <a href="requestform.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Book Service</a>
-                        </div>
-                        
-                          <div class="navbar-nav ms-auto">
-                              <a href="signup.html" class="nav-item nav-link btn btn-warning rounded-pill px-4 m-2">Sign Up</a>
-                              <a href="login.html" class="nav-item nav-link btn btn-warning rounded-pill px-4 m-2">Login</a>
-                           </div>
-                     </div>
-                 </nav>
-            </div>
-         </section>
-      <!-- section one ends here nav bar -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-        <!-- section overlay content of the e car -->
-          <section class="row">
-            <div class="col-lg-12">
-             <div class="card text-white bg-dark text-center">
-                    <img src="images/carroad1.jpg" class="card" id="carroad" alt="carroad1" width="100%" height="550">
+                <!-- nav bar contents -->
 
-                        <div class="card-img-overlay cardroar1">
-
-                        <div><button type="button" class="btn btn-outline-warning text-warning" id="mine" disabled>Premier Automotive Services in Kenya</button></div>
+                <div id="navbarcontents" class="collapse navbar-collapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-link active btn btn-warning rounded-pill px-4 m-2">Home</a>
+                        <a href="services.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Service</a>
+                        <a href="about.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">About Us</a>
+                        <a href="requestform.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Book Service</a>
+                    </div>
                     
-                         <h1 class="pt-5 text-dark wheel">Your Journey, Our Wheels</h1>
-
-                         <h1 class="pt-5"><b class="text-dark">Drive with <br><span class="text-warning">Confidence</span></b></h1> <br>
-
-                         <p class="pt-5"><b>From luxury car rentals to expert mechanical and</b> <br> premium car care products. We are Nairobi Most trusted automotive hub</p>
-
-                         <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 m-2 A1">Explore Our Services</a>
-                         <a href="#" class="btn btn-outline-info lg rounded-pill px-4">About Us</a>
+                    <div class="navbar-nav ms-auto">
+                        <a href="signup.html" class="nav-item nav-link btn btn-warning rounded-pill px-4 m-2">Sign Up</a>
+                        <a href="login.html" class="nav-item nav-link btn btn-warning rounded-pill px-4 m-2">Login</a>
+                    </div>
                 </div>
-             </div>
             </div>
-          </section> <br>
-        <!-- e car content -->
+         </nav>
+    </div>
+    <!-- ======================== end ======================= -->
 
-        <!-- paragraph to carousel info -->
-         <h3 class="text-warning text-center">AVAILABLE FOR HIRE</h3><br>
-         <h1 class="A2 text-center"><b>Explore Our Fleet</b></h1>
-         <p class="text-center justify-content-center"><center>Premium vehicles maintained to the highest standards for your comfort and safety.</center></p>
-         <!-- end of carousel info -->
-
-        <!-- to dsiplay carousel and other content -->
-
-         <div class="container">
-
-            <div id="carCarousel" class="carousel slide" data-bs-ride="false">
-
-               <div class="carousel-inner">
-
-                  <!-- Slide 1 -->
-                  <div class="carousel-item active">
-                     <div class="row">
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/bmw1.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">Luxury Executive Sedan</h5>
-                           <p class="text-muted">Ksh 8,500/day</p>
-                           <p>4 Seats • Auto • Petrol</p>
-                           <button class="btn btn-dark w-100">Book Now</button>
-                           </div>
+    <!-- =============caerd one section ============= -->
+    <div class="container my-4">
+        <section class="row">
+            <div class="col-lg-12">
+                <div class="card hero-section">
+                    <img src="images/carroad1.jpg" alt="carroad1" width="100%" height="550" style="object-fit: cover;">
+                    <div class="card-img-overlay hero-overlay">
+                        <button type="button" class="btn btn-warning fw-semibold px-3 py-1 mb-3" style="font-size: 0.85rem; border-radius: 30px;" disabled>
+                            Premier Automotive Services in Kenya
+                        </button>
+                        <h1 class="display-4 fw-bold text-dark tracking-tight mb-2">Your Journey, Our Wheels</h1>
+                        <h2 class="fw-bold text-dark mb-3">Drive with <span class="text-warning">Confidence</span></h2>
+                        <p class="lead text-secondary max-w-md mb-4 fs-6">
+                            From luxury car rentals to expert mechanical diagnostic architectures and premium car care products. We are Nairobi's most trusted automotive hub.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2">
+                            <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold text-dark">Explore Our Services</a>
+                            <a href="#" class="btn btn-outline-dark btn-lg rounded-pill px-4">About Us</a>
                         </div>
-                     </div>
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/isuzu2.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">Rugged Safari 4x4</h5>
-                           <p class="text-muted">Ksh 12,000/day</p>
-                           <p>7 Seats • Manual • Diesel</p>
-                           <button class="btn btn-dark w-100">Book Now</button>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/Audio1.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">City Compact</h5>
-                           <p class="text-muted">Ksh 4,500/day</p>
-                           <p>4 Seats • Auto • Petrol</p>
-                           <button class="btn btn-dark w-100">Book Now</button>
-                           </div>
-                        </div>
-                     </div>
-
-                     </div>
-                  </div>
-
-                  <!-- Slide 2 -->
-                  <div class="carousel-item">
-                     <div class="row">
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/ford 3.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">Rugged Safari 4x4</h5>
-                           <p class="text-muted">Ksh 10,000/day</p>
-                           <p>7 Seats • Manual • Diesel</p>
-                           <button class="btn btn-dark w-100">Book Now</button>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/subaru1.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">City Compact</h5>
-                           <p class="text-muted">Ksh 4,500/day</p>
-                           <p>4 Seats • Auto • Petrol</p>
-                           <button class="btn btn-warning w-100">Book Now</button>
-                           </div>
-                        </div>
-                     </div>
-
-                     <div class="col-md-4">
-                        <div class="card shadow-sm">
-                           <img src="images/outlander.jpg">
-                           <div class="card-body">
-                           <h5 class="card-title">Family SUV</h5>
-                           <p class="text-muted">Ksh 6,000/day</p>
-                           <p>7 Seats • Auto • Petrol</p>
-                           <button class="btn btn-warning w-100">Book Now</button>
-                           </div>
-                        </div>
-                     </div>
-
-                     </div>
-                  </div>
-
-               </div>
-
-               <!-- Controls -->
-               <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-               </button>
-
-               <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-               </button>
-
+                    </div>
+                </div>
             </div>
-         </div><br><br>
-        <!-- display of carsouel and other content ends -->
+        </section>
+    </div>
+    <!-- ===========================ends here=================== -->
 
-          <!-- over heads of services of E-hub -->
-         <div class="container py-5">
-            <div class="row g-4">
+    <!-- =============available fleet section coursel============= -->
 
-               <!-- Card 1 -->
-               <div class="col-md-4">
-                     <div class="service-card" id="s25">
-                        <div class="icon-box">
-                           <i class="bi bi-truck"></i>
-                        </div>
-                        <h5 class="service-title">Premium Rentals</h5>
-                        <p class="service-text">
-                           Wide range of maintained vehicles for hire. From economy city cars 
-                           to luxury SUVs for your Kenyan safari.
-                        </p>
-                     </div>
-               </div>
+    <div class="container my-5">
+         <h3 class="text-warning text-center fw-bold small tracking-wider uppercase mb-1">AVAILABLE FOR HIRE</h3>
+         <h1 class="text-center fw-bold text-dark mb-2">Explore Our Fleet</h1>
+         <p class="text-center text-muted mb-5">Premium vehicles maintained to the highest standards for your comfort and safety.</p>
 
-               <!-- Card 2 -->
-               <div class="col-md-4">
-                     <div class="service-card" id="s25">
-                        <div class="icon-box icon-white">
-                           <i class="bi bi-wrench"></i>
-                        </div>
-                        <h5 class="service-title">Expert Repairs</h5>
-                        <p class="service-text">
-                           Qualified mechanics specializing in engine diagnostics,
-                           mechanical repairs, and routine maintenance.
-                        </p>
-                     </div>
-               </div>
+         <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-               <!-- Card 3 -->
-               <div class="col-md-4">
-                     <div class="service-card" id="s25">
-                        <div class="icon-box">
-                           <i class="bi bi-shield-check"></i>
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/bmw1.jpg" alt="BMW">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">Luxury Executive Sedan</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 8,500<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>4 Seats</span><span>Auto</span><span>Petrol</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
                         </div>
-                        <h5 class="service-title">Quality Guaranteed</h5>
-                        <p class="service-text">
-                           We use only genuine parts and high-quality products
-                           for car washes and detailing services.
-                        </p>
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/isuzu2.jpg" alt="Isuzu">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">Rugged Safari 4x4</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 12,000<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>7 Seats</span><span>Manual</span><span>Diesel</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
                         </div>
-                  </div>
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/Audio1.jpg" alt="Audi">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">City Compact</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 4,500<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>4 Seats</span><span>Auto</span><span>Petrol</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/ford 3.jpg" alt="Ford">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">Rugged Safari 4x4</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 10,000<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>7 Seats</span><span>Manual</span><span>Diesel</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/subaru1.jpg" alt="Subaru">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">City Compact</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 4,500<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>4 Seats</span><span>Auto</span><span>Petrol</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card fleet-card">
+                               <img src="images/outlander.jpg" alt="Outlander">
+                               <div class="card-body">
+                                   <h5 class="card-title fw-bold text-dark">Family SUV</h5>
+                                   <div class="price-tag text-warning mb-2">Ksh 6,000<span class="fs-6 text-muted font-normal">/day</span></div>
+                                   <div class="specs-badges mb-3">
+                                       <span>7 Seats</span><span>Auto</span><span>Petrol</span>
+                                   </div>
+                                   <button class="btn btn-action-card w-100">Book Now</button>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
          </div>
-          <br><br>
-           <!-- end of over heads -->
+    </div>
+    <!--=============== end of sectiion coursel============= -->
 
-           <!-- the comprehensive autos  -->
-            <h2 class="text-primary A3 text-center">Our Expertise</h2>
-            <h3 class="A4 text-center"><b>comprehensive Auto Care</b></h3>
+    <!-- ==============services section====================== -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                 <div class="modern-service-card">
+                    <div class="icon-box">
+                       <i class="bi bi-truck"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Premium Rentals</h5>
+                    <p class="text-muted small mb-0">
+                       Wide range of maintained vehicles for hire. From economy city cars to luxury SUVs for your Kenyan safari.
+                    </p>
+                 </div>
+            </div>
+            <div class="col-md-4">
+                 <div class="modern-service-card">
+                    <div class="icon-box">
+                       <i class="bi bi-wrench"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Expert Repairs</h5>
+                    <p class="text-muted small mb-0">
+                       Qualified mechanics specializing in engine diagnostics, mechanical repairs, and routine maintenance.
+                    </p>
+                 </div>
+            </div>
+            <div class="col-md-4">
+                 <div class="modern-service-card">
+                    <div class="icon-box">
+                       <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="fw-bold text-dark mb-2">Quality Guaranteed</h5>
+                    <p class="text-muted small mb-0">
+                       We use only genuine parts and high-quality products for car washes and premium detailing services.
+                    </p>
+                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- ==========================end of section ======================= -->
 
-            <section class="row">
+    <!-- =============expertise section ============= -->
+    <div class="container my-5">
+        <h5 class="text-primary text-center fw-bold mb-1">Our Expertise</h5>
+        <h2 class="text-center fw-bold text-dark mb-2">Comprehensive Auto Care</h2>
+        <p class="text-center text-muted mb-4">Everything your vehicle needs under one roof.</p>
+
+        <section class="row g-4">
             <div class="col-lg-6">
-                    <p class="text-center roof">Everthing your vehicle needs under one roof.</p>
-                    <!-- card one for mechanics -->
-                <div class="card text-white bg-dark border-dark mb-3" style="max-width: 50rem;">
-                        <img src="images/repair3.jpg" class="card" alt="repair3" width="100%">
-
-                    <div class="card-img-overlay">
-
-                    <h1 class="text-success"><b>Complete engine diagonistics, brake services and general mechanical...</b></h1>
-
-                    <p class="card-text text-success"><b>Drive with Confidence</b></p> <br>
-
-                     </div>
+                <div class="card expertise-card text-white">
+                    <img src="images/repair3.jpg" alt="repair3">
+                    <div class="card-img-overlay expertise-overlay">
+                        <h3 class="text-white">Mechanical Workshop</h3>
+                        <p class="text-white-50 mb-0">Complete engine diagnostics, professional brake services, transmission overhauls and general mechanical upkeep.</p>
+                        <span class="text-warning fw-semibold mt-2 small">Drive with Confidence →</span>
+                    </div>
                 </div>
-             </div>
+            </div>
 
-             <!-- card 2 for car wash -->
-              <div class="col-lg-6 text-center text-primary"> <br><br>
-
-                <div class="card text-white bg-dark border-dark mb-3" style="max-width: 50rem;">
-                        <img src="images/carwash 1.jpg" class="card" alt="carwash1" width="100%">
-
-                    <div class="card-img-overlay">
-
-                    <h1 class="text-danger text center"><b>Professional Car Wash</b></h1>
-
-                    <p class="text-danger">premium exterior foam wash, ineterior detailing and engine stream cleaning...</p> <br>
-
-                     </div>
+            <div class="col-lg-6">
+                <div class="card expertise-card text-white">
+                    <img src="images/carwash 1.jpg" alt="carwash1">
+                    <div class="card-img-overlay expertise-overlay">
+                        <h3 class="text-white">Professional Car Wash</h3>
+                        <p class="text-white-50 mb-0">Premium exterior active foam wash, detailed interior detailing, upholstery restoration and vacuuming, and safe engine steam cleaning cycles.</p>
+                        <span class="text-warning fw-semibold mt-2 small">Restore Your Shine →</span>
+                    </div>
                 </div>
-             </div>
-            </section> <br><br>
-            <!-- end of compresive autos -->
+            </div>
+        </section> 
+    </div>
+    <!-- ==================end of section expertise ================= -->
+     
 
-            <!-- awarness track for the main theme -->
-             <section class="row  bg-primary text-white">
-                <div class="col-lg-12 text-center">
-                    <h1 class="A7"><b>Ready to hit the Road?</b></h1>
-
-                    <p>Wheter you need a rental for your next trip or service for your current ride, E-Car is here to help.</p> <br><br>
-
-                     <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 m-2 A5">Book Appointment</a> 
-                     <a href="#" class="btn btn-outline-info btn lg rounded-pill px-4 m-2 A6">Contact Us</a>
+     <!-- =============call to action section ============= -->
+    <div class="container">
+        <section class="row bg-banner-cta text-white text-center mx-1">
+            <div class="col-lg-12">
+                <h1 class="fw-bold mb-3">Ready to Hit the Road?</h1>
+                <p class="lead text-white-50 mb-4">Whether you need a luxury rental for your next safari trip or professional service for your current ride, E-Car Hub is here to assist.</p>
+                <div class="d-flex justify-content-center gap-2">
+                     <a href="#" class="btn btn-warning btn-lg rounded-pill px-4 fw-semibold text-dark">Book Appointment</a> 
+                     <a href="#" class="btn btn-outline-light btn-lg rounded-pill px-4">Contact Us</a>
                 </div>
-             </section><hr>
-             <!-- end of the track theme -->
+            </div>
+        </section>
+    </div>
 
-             <!-- testmonials sectiom to improve connectivity starts here -->          
-               <section class="py-5">
-                  <div class="container text-center">
+    <!-- ==========testimonials section ========== -->
+    <section class="py-5">
+        <div class="container text-center">
+            <div class="section-title-small">TESTIMONIALS</div>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="title-underline"></div>
 
-                     <div class="section-title-small">TESTIMONIALS</div>
-                     <h2 class="section-title">What Our Clients Say</h2>
-                     <div class="title-underline"></div>
+            <div class="row mt-5 g-4">
+                 <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                       <div class="stars">
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                       </div>
+                       <i class="bi bi-quote quote-icon"></i>
+                       <p class="testimonial-text">
+                             "The best car rental experience in Nairobi. The Prado I hired was in pristine condition and the service was seamless. Highly recommended for professionals."
+                       </p>
+                       <div class="profile">
+                             <div class="profile-circle">SO</div>
+                             <div>
+                                <div class="profile-name">Samuel Omandi</div>
+                                <div class="profile-role">Business Executive</div>
+                             </div>
+                       </div>
+                    </div>
+                 </div>
 
-                     <div class="row mt-5 g-4">
+                 <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                       <div class="stars">
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                       </div>
+                       <i class="bi bi-quote quote-icon"></i>
+                       <p class="testimonial-text">
+                             "I've been taking my Mazda to E-car Hub for maintenance for two years. Their mechanical team is honest, skilled, and they always use genuine parts. Truly reliable!"
+                       </p>
+                       <div class="profile">
+                             <div class="profile-circle">MW</div>
+                             <div>
+                                <div class="profile-name">Mercy Wanjiku</div>
+                                <div class="profile-role">Regular Client</div>
+                             </div>
+                       </div>
+                    </div>
+                 </div>
 
-                           <!-- Card 1 -->
-                           <div class="col-lg-4 col-md-6">
-                              <div class="testimonial-card">
-                                 <div class="stars">
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                 </div>
+                 <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card">
+                       <div class="stars">
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                             <i class="bi bi-star-fill"></i>
+                       </div>
+                       <i class="bi bi-quote quote-icon"></i>
+                       <p class="testimonial-text">
+                             "Excellent engine diagnostics! They fixed a recurring issue that other garages couldn't solve. The professional car wash is also a great bonus. 5 stars!"
+                       </p>
+                       <div class="profile">
+                             <div class="profile-circle">DK</div>
+                             <div>
+                                <div class="profile-name">David Kipkorir</div>
+                                <div class="profile-role">Safari Enthusiast</div>
+                             </div>
+                       </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </section>
 
-                                 <i class="bi bi-quote quote-icon"></i>
+    <!-- =============footer section ============= -->
 
-                                 <p class="testimonial-text">
-                                       "The best car rental experience in Nairobi. The Prado I hired was in pristine condition and the service was seamless. Highly recommended for professionals."
-                                 </p>
+    <section class="row footer-top-matrix mx-0 text-md-start text-center">
+         <div class="col-lg-3 mb-4 mb-lg-0">
+             <h3 class="fw-bold mb-3 text-warning">E-Car Hub</h3>
+             <p class="text-white-50">Kenya's premier automotive partner. From reliable rentals to expert maintenance, we keep you moving with quality and trust.</p>
+         </div>
 
-                                 <div class="profile">
-                                       <div class="profile-circle">SO</div>
-                                       <div>
-                                          <div class="profile-name">Samuel Omandi</div>
-                                          <div class="profile-role">Business Executive</div>
-                                       </div>
-                                 </div>
-                              </div>
-                           </div>
+         <div class="col-lg-3 mb-4 mb-lg-0">
+             <h4 class="fw-bold mb-3 fs-5">Quick Links</h4>
+             <ul class="list-unstyled">
+                 <li class="mb-2"><a href="index.html">Home Page</a></li>
+                 <li class="mb-2"><a href="about.html">About Us</a></li>
+                 <li class="mb-2"><a href="services.html">Services Portfolio</a></li>
+                 <li class="mb-2"><a href="#">Premium Car Rental</a></li>
+             </ul>
+         </div>
 
-                           <!-- Card 2 -->
-                           <div class="col-lg-4 col-md-6">
-                              <div class="testimonial-card">
-                                 <div class="stars">
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                 </div>
+         <div class="col-lg-3 mb-4 mb-lg-0">
+             <h4 class="fw-bold mb-3 fs-5">Our Core Services</h4>
+             <ul class="list-unstyled text-white-50">
+                 <li class="mb-2">Car Repair & Maintenance</li>
+                 <li class="mb-2">Professional Foam Car Wash</li>
+                 <li class="mb-2">Advanced Engine Diagnostics</li>
+                 <li class="mb-2">Genuine Auto Parts Sales</li>
+             </ul>
+         </div>
 
-                                 <i class="bi bi-quote quote-icon"></i>
-
-                                 <p class="testimonial-text">
-                                       "I've been taking my Mazda to E-car Hub for maintenance for two years. Their mechanical team is honest, skilled, and they always use genuine parts. Truly reliable!"
-                                 </p>
-
-                                 <div class="profile">
-                                       <div class="profile-circle">MW</div>
-                                       <div>
-                                          <div class="profile-name">Mercy Wanjiku</div>
-                                          <div class="profile-role">Regular Client</div>
-                                       </div>
-                                 </div>
-                              </div>
-                           </div>
-
-                           <!-- Card 3 -->
-                           <div class="col-lg-4 col-md-6">
-                              <div class="testimonial-card">
-                                 <div class="stars">
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                       <i class="bi bi-star-fill"></i>
-                                 </div>
-
-                                 <i class="bi bi-quote quote-icon"></i>
-
-                                 <p class="testimonial-text">
-                                       "Excellent engine diagnostics! They fixed a recurring issue that other garages couldn't solve. The professional car wash is also a great bonus. 5 stars!"
-                                 </p>
-
-                                 <div class="profile">
-                                       <div class="profile-circle">DK</div>
-                                       <div>
-                                          <div class="profile-name">David Kipkorir</div>
-                                          <div class="profile-role">Safari Enthusiast</div>
-                                       </div>
-                                 </div>
-                              </div>
-                           </div>
-
-                     </div>
-
-                  </div>
-               </section>
-             <!-- testmonials sectiom to improve connectivity ends here -->
-
-
-             <!-- footer section section of summary -->
-             <section class="row text-center p-3 mb-2 bg-primary text-white">
-                <div class="col-lg-3">
-                    <h1>E car <span class="text-primary">Hub</span></h1>
-
-                    <p>Kenya premier Automotive partner. from reliable rental to expert maintainance, we keep you moving with quality and trust</p>
-                </div>
-
-                <!-- quick links -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Quick links</h1>
-                    <a href="index.html" class="A8">Home page</a><br> <br><br>
-                    <a href="about.html" class="A8">About us</a><br><br><br>
-                    <a href="services.html" class="A8">Services</a><br><br><br>
-                    <a href="#" class="A8">Car Rental</a><br><br>
-                </div>
-                <!-- links ends here -->
-
-                <!-- services -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Services</h1>
-                    <ul>
-                        <li>Car repair & maintainance</li>
-                        <li>Professional Car Wash</li>
-                        <li>Engine diagonistics</li>
-                        <li>Auto parts sales</li>
-                    </ul>
-                </div>
-                <!-- end of services -->
-
-                <!-- contact us -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Contact Us</h1>
-                    <img src="images/location-pin.webp" alt="location-pin" width="5%" >Nairobi, Kenya <br><br>
-
-                    <img src="images/phone_2.webp" alt="phone" width="5%"> +254 76000000 <br><br>
-
-                    <img src="images/message1.webp" alt="phone" width="5%"> info@ecarhub.co.ke <br><br>
-
-                    <!-- media links -->
-                     <a href="htps://www.facebook.com"><img src="images/fb.webp" alt="fb" width="10%"></a>  
-                     <a href="htpps://www.instagram.com"><img src="images/ig.webp" alt="ig"  width="10%"></a>
-                     <a href="https:www.titok.com"><img src="images/tiktok_icon.webp" alt="titok"  width="10%"></a>
-
-                </div>
-            </section>
-             <!-- endnote summarry -->
-
-            <!-- footer -->
+         <div class="col-lg-3">
+             <h4 class="fw-bold mb-3 fs-5">Contact Us</h4>
+             <p class="mb-2 text-white-50"><img src="images/location-pin.webp" alt="location" width="16" class="me-2">Nairobi, Kenya</p>
+             <p class="mb-2 text-white-50"><img src="images/phone_2.webp" alt="phone" width="16" class="me-2">+254 76000000</p>
+             <p class="mb-3 text-white-50"><img src="images/message1.webp" alt="message" width="16" class="me-2">info@ecarhub.co.ke</p>
              
-                 <footer class="text-center text-white bg-dark p-2">
-                    <b>developed by Eng.Okeyo. &copy; 2026 all rights reserved</b>
-                 </footer>
+             <div class="d-flex justify-content-md-start justify-content-center gap-2 mt-3">
+                  <a href="https://www.facebook.com"><img src="images/fb.webp" alt="fb" width="28"></a>  
+                  <a href="https://www.instagram.com"><img src="images/ig.webp" alt="ig" width="28"></a>
+                  <a href="https://www.tiktok.com"><img src="images/tiktok_icon.webp" alt="tiktok" width="28"></a>
+             </div>
+         </div>
+    </section>
 
-            <!-- end of footer -->
+    <footer class="text-center text-white-50 bg-dark p-3 small">
+         <div>Developed by Eng. Okeyo. &copy; 2026 All Rights Reserved</div>
+    </footer>
+
 </body>
 </html>

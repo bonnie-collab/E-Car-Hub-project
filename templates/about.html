@@ -5,187 +5,254 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us Page</title>
 
-     <!-- linking boostrap and js script -->
     <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="dist/js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Navbar Active/Inactive Page UX Enhancements */
+        .custom-nav-btn {
+            background-color: transparent !important;
+            color: #333333 !important;
+            border: 1px solid rgba(0, 0, 0, 0.15) !important;
+            transition: all 0.2s ease-in-out;
+        }
+        .custom-nav-btn:hover {
+            background-color: rgba(255, 193, 7, 0.1) !important;
+            border-color: #ffc107 !important;
+            color: #000000 !important;
+        }
+        .active-page {
+            background-color: #ffc107 !important;
+            border-color: #ffc107 !important;
+            color: #000000 !important;
+            box-shadow: 0 4px 10px rgba(255, 193, 7, 0.3);
+        }
+
+        /* Modern Card Transformations */
+        .modern-card {
+            border: none;
+            border-radius: 16px;
+            background: #ffffff;
+            transition: all 0.3s ease-in-out;
+            padding: 2rem 1.5rem;
+            height: 100%;
+        }
+
+        .modern-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #fdf6e2;
+        }
+
+        .icon-wrapper img {
+            max-width: 45px;
+            height: auto;
+        }
+
+        .modern-card h3 {
+            font-size: 1.4rem;
+            color: #212529;
+            margin-bottom: 0.75rem;
+        }
+
+        .modern-card p {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        /* Hero Overlay adjustments */
+        .hero-card {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-img {
+            object-fit: cover;
+            filter: brightness(50%);
+        }
+
+        /* Image frame styling */
+        .img-frame {
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .img-frame img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-     <!-- section one starts here nav bar  -->
-         <section class="row">
-            <div class="col-lg-12">
-                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <a href="index.html" class="navbar-brand"><img src="images/Car_Grey.webp" alt="Car_Grey"><b>E-Car Hub</b></a>
+    <header class="container-fluid bg-light shadow-sm sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img src="images/Car_Grey.webp" alt="Car_Grey" class="me-2" style="height: 30px;">
+                    <span class="fs-4"><b>E-Car Hub</b></span>
+                </a>
 
-                     <button class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
-                        <span class="navbar-toggler-icon"></span>
-                     </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarcontents">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                     <div id="navbarcontents" class="navbar-collapse collapse">
-                        <div class="navbar-nav ms-auto">
-                            <a href="index.html" class="nav-link active btn btn-warning rounded-pill px-4 m-2">Home</a>
-                            <a href="services.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">Service</a>
-                            <a href="about.html" class="nav-link btn btn-warning rounded-pill px-4 m-2">About Us</a>
-                            <a href="#" class="nav-link btn btn-warning rounded-pill px-4 m-2">Book Service</a>
-                        </div>
-                     </div>
-                 </nav>
-            </div>
-         </section>
-         <!-- section one ends here nav bar -->
-
-          <!-- section overlay content of the e car -->
-          <section class="row">
-            <div class="col-lg-12">
-                <div class="card text-warning bg-dark text-center rounded mx-auto d-block">
-                <img src="images/carroad1.jpg" class="card" alt="carroad1" width="100%" height="350px" style="max-width: auto;">
-
-                <div class="card-img-overlay">
-                    <h1><b>About E-car Hub</b></h1>
-
-                    <p>Driven by passion, defined by quality. We are redefining the automotive service experience in Kenya.</p>
-                </div>
-            </div>
-            </div>
-          </section> <br><br>
-          <!-- e car content -->
-
-          <!-- our story about us section one -->
-           <section class="row" style="margin: 20px;;">
-                <div class="col-lg-6 text-center">
-                    <h5 class="text-warning">Our story</h5>
-
-                    <h1 class="text-dark">Your Trusted Automotive Partner in Kenya</h1>
-                    <p>Founded with a vision to bring reliability and professionalism to the Kenyan automotive industry, E-car Hub has grown into a one-stop center for all vehicle needs.
-                    We understand the unique challenges of Kenyan roads and the importance of having a reliable vehicle. Whether it's a routine service, a complex repair, or a rental for your next adventure, our team is dedicated to keeping you moving safely.</p>
-
-                    
-                    <div><button type="button" class="btn btn-outline-secondary text-warning" disabled>5+ <br> Years Of experience</button></div><br><br>
-
-                    <div><button type="button" class="btn btn-outline-secondary text-warning" disabled> 1000+<br>Happy clients</button></div>
-    
-                </div> 
-                <!-- image of demio -->
-
-                <div class="col-lg-6">
-                    <div class="card car-card shadow-sm">
-                        <img src="images/Audio1.jpg">
+                <div id="navbarcontents" class="navbar-collapse collapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-link btn custom-nav-btn rounded-pill px-4 m-2 fw-bold">Home</a>
+                        <a href="services.html" class="nav-link btn custom-nav-btn rounded-pill px-4 m-2 fw-bold">Service</a>
+                        <a href="about.html" class="nav-link btn active-page rounded-pill px-4 m-2 fw-bold">About Us</a>
+                        <a href="#" class="nav-link btn custom-nav-btn rounded-pill px-4 m-2 fw-bold">Book Service</a>
                     </div>
                 </div>
-           </section>
-           <!-- end of about us --> <br><br>
-
-           <!-- why kenya trust us -->
-            <section class="row text-center">
-                <div class="col-lg-12">
-                    <h1> <b>Why Kenyans Trust Us</b></h1>
-                    <p>We don't just fix cars; we build relationships based on transparency and results.
-                    </p>
-                </div>
-            </section> <br><br>
-            <!-- ends here trust us -->
-
-            <!-- creating cards to hold some content -->
-          <section class="row">
-             <div class="col-lg-4 text-center">
-              <div class="card text-bg-light mb-3" style="max-width: 18rem;">
-                    <div class="card-header"><img src="images/people_icon.webp" alt="people"></div>
-                    <div class="card-body">
-                        <h1 class="card-title"><b>Expert Team</b></h1>
-                        <p class="card-text">Our mechanics are certified professionals with years of experience handling various vehicle makes and models.</p>
+            </nav>
+        </div>
+    </header>
+    <main class="container my-5">
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card hero-card text-white text-center">
+                    <img src="images/carroad1.jpg" class="hero-img" alt="carroad1" width="100%" height="400px">
+                    <div class="card-img-overlay d-flex flex-column justify-content-center align-items-center">
+                        <h1 class="display-4 text-warning fw-bold">About E-car Hub</h1>
+                        <p class="lead max-width-600">Driven by passion, defined by quality. We are redefining the automotive service experience in Kenya.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="row align-items-center g-5 mb-5">
+            <div class="col-lg-6">
+                <h5 class="text-warning text-uppercase tracking-wider fw-bold">Our story</h5>
+                <h2 class="text-dark display-5 fw-bold mb-4">Your Trusted Automotive Partner in Kenya</h2>
+                <p class="text-muted mb-4 lead">Founded with a vision to bring reliability and professionalism to the Kenyan automotive industry, E-car Hub has grown into a one-stop center for all vehicle needs.</p>
+                <p class="text-muted mb-4">We understand the unique challenges of Kenyan roads and the importance of having a reliable vehicle. Whether it's a routine service, a complex repair, or a rental for your next adventure, our team is dedicated to keeping you moving safely.</p>
+                
+                <div class="d-flex gap-3 mt-4">
+                    <button type="button" class="btn btn-outline-secondary py-3 px-4 text-dark fw-bold" disabled style="opacity: 1;">
+                        <span class="fs-3 text-warning d-block fw-bold">5+</span> Years Of Experience
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary py-3 px-4 text-dark fw-bold" disabled style="opacity: 1;">
+                        <span class="fs-3 text-warning d-block fw-bold">1000+</span> Happy Clients
+                    </button>
+                </div>
+            </div> 
+
+            <div class="col-lg-6">
+                <div class="img-frame shadow-lg">
+                    <img src="images/Audio1.jpg" alt="Audi Car Structure">
+                </div>
+            </div>
+        </section>
+
+        <section class="row text-center my-5 pt-4">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold text-dark">Why Kenyans Trust Us</h2>
+                <p class="text-muted lead">We don't just fix cars; we build relationships based on transparency and results.</p>
+            </div>
+        </section>
+
+        <section class="row g-4 mb-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="card modern-card shadow-sm text-center">
+                    <div class="icon-wrapper">
+                        <img src="images/people_icon.webp" alt="people">
                     </div>
-              </div>
+                    <h3><b>Expert Team</b></h3>
+                    <p>Our mechanics are certified professionals with years of experience handling various vehicle makes and models.</p>
+                </div>
+            </div>
 
-              <!-- second image of car -->
-               <div class="col-lg-4 text-center">
-                 <div class="card shadow mb-3" style="max-width: 18rem;">
+            <div class="col-lg-4 col-md-6">
+                <div class="card modern-card shadow-sm text-center">
+                    <div class="icon-wrapper">
+                        <img src="images/quality_badge.webp" alt="badge">
+                    </div>
+                    <h3><b>Quality Assurance</b></h3>
+                    <p>We use genuine parts and top-tier products for all repairs and maintenance to ensure vehicle longevity.</p>
+                </div>
+            </div>
 
-                     <div class="card-header ">
-                        <Img><img src="images/quality_badge.webp" alt="badge"></Img>
-                     </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card modern-card shadow-sm text-center">
+                    <div class="icon-wrapper">
+                        <img src="images/location-pin.webp" alt="location">
+                    </div>
+                    <h3><b>Convenient Location</b></h3>
+                    <p>Located centrally in Nairobi, making it easy for you to drop off your vehicle or pick up an active rental.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-                      <div class="card-body">
-                        <h1><b>quality Assurance</b></h1>
-                        <p>We use genuine parts and top-tier products for all repairs and maintenance to ensure longevity.</p>
-                      </div>
-                 </div>
-              </div>
-               <!-- 2nd image card ends -->
-
-               <!-- 3rd image card  -->
-                 <div class="col-lg-4 text-center">
-                 <div class="card shadow " style="max-width: 18rem;">
-
-                     <div class="card-header ">
-                        <Img><img src="images/location-pin.webp" alt="location"></Img>
-                     </div>
-
-                      <div class="card-body">
-                        <h1><b>Convenient Location</b></h1>
-                        <p>Located centrally in Nairobi, making it easy for you to drop off your vehicle or pick up a rental</p>
-                      </div>
-                 </div>
-              </div>
-                <!-- 3rd image card ends -->
-            </section>
-             <!-- finish of cards  -->
-
-             <!-- footers -->
-               <section class="row text-center p-3 mb-2 bg-primary text-white">
-                <div class="col-lg-3">
-                    <h1>E car <span class="text-primary">Hub</span></h1>
-
-                    <p>Kenya premier Automotive partner. from reliable rental to expert maintainance, we keep you moving with quality and trust</p>
+    <section class="container-fluid bg-primary text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-3">E-car Hub</h3>
+                    <p class="text-white-50">Kenya's premier Automotive partner. From reliable rentals to expert maintenance, we keep you moving with absolute quality and trust.</p>
                 </div>
 
-                <!-- quick links -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Quick links</h1>
-                    <a href="index.html" class="A8">Home page</a><br> <br><br>
-                    <a href="about.html" class="A8">About us</a><br><br><br>
-                    <a href="services.html" class="A8">Services</a><br><br><br>
-                    <a href="#" class="A8">Car Rental</a><br><br>
-                </div>
-                <!-- links ends here -->
-
-                <!-- services -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Services</h1>
-                    <ul>
-                        <li>Car repair & maintainance</li>
-                        <li>Professional Car Wash</li>
-                        <li>Engine diagonistics</li>
-                        <li>Auto parts sales</li>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Quick Links</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Home Page</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none">Services</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Car Rental</a></li>
                     </ul>
                 </div>
-                <!-- end of services -->
 
-                <!-- contact us -->
-                 <div class="col-lg-3 text-center">
-                    <h1>Contact Us</h1>
-                    <img src="images/location-pin.webp" alt="location-pin" width="5%" >Nairobi, Kenya <br><br>
-
-                    <img src="images/phone_2.webp" alt="phone" width="5%"> +254 76000000 <br><br>
-
-                    <img src="images/message1.webp" alt="phone" width="5%"> info@ecarhub.co.ke <br><br>
-
-                    <!-- media links -->
-                     <a href="htps://www.facebook.com"><img src="images/fb.webp" alt="fb" width="10%"></a>  
-                     <a href="htpps://www.instagram.com"><img src="images/ig.webp" alt="ig"  width="10%"></a>
-                     <a href="https:www.titok.com"><img src="images/tiktok_icon.webp" alt="titok"  width="10%"></a>
-
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Services</h4>
+                    <ul class="text-white-50 list-unstyled">
+                        <li class="mb-2">Car Repair & Maintenance</li>
+                        <li class="mb-2">Professional Car Wash</li>
+                        <li class="mb-2">Engine Diagnostics</li>
+                        <li class="mb-2">Auto Parts Sales</li>
+                    </ul>
                 </div>
-            </section>
-             <!-- endnote summarry -->
 
-            <!-- footer -->
-             
-                 <footer class="text-center text-white bg-dark p-2">
-                    <b>developed by Eng.Okeyo. &copy; 2026 all rights reserved</b>
-                 </footer>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="fw-bold mb-3">Contact Us</h4>
+                    <p class="text-white-50 mb-2"><img src="images/location-pin.webp" alt="location-pin" class="me-2" width="16">Nairobi, Kenya</p>
+                    <p class="text-white-50 mb-2"><img src="images/phone_2.webp" alt="phone" class="me-2" width="16">+254 76000000</p>
+                    <p class="text-white-50 mb-3"><img src="images/message1.webp" alt="email" class="me-2" width="16">info@ecarhub.co.ke</p>
 
-            <!-- end of footer -->
+                    <div class="d-flex gap-2">
+                        <a href="https://www.facebook.com" target="_blank"><img src="images/fb.webp" alt="fb" width="32"></a>  
+                        <a href="https://www.instagram.com" target="_blank"><img src="images/ig.webp" alt="ig" width="32"></a>
+                        <a href="https://www.tiktok.com" target="_blank"><img src="images/tiktok_icon.webp" alt="tiktok" width="32"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center text-white-50 bg-dark py-3">
+        <small>Developed by <b>Eng. Okeyo</b> &copy; 2026 All Rights Reserved</small>
+    </footer>
 
 </body>
 </html>
